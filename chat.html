@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>RemoChat</title>
+</head>
+<body>
+    <nav class="topnav">
+        <a href="#" class="logo nav-item">
+            RemoChat
+        </a>
+        <div class="linkList" id="linkList">
+            <a href="#" class="nav-item">HOME</a>
+            <a href="#" class="nav-item">ABOUT</a>
+            <a href="#" class="nav-item">FAQ</a>
+        </div>
+        <a href="#" class="bars" id="bars">
+            <span class="bar" id="bar"></span>
+            <span class="bar" id="bar"></span>
+            <span class="bar" id="bar"></span>
+        </a>
+    </nav>
+    <div class="container" id="msgField">
+        <div class="message right">Indo: Hello World!</div>
+        <div class="message left">World: Hello Indo!</div>
+    </div>
+    <div class="inputFld">
+        <form action="" id="sendForm">
+            <input type="text" placeholder="Type here...." id="msgInput">
+            <button>Send</button>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.3/qs.min.js" integrity="sha512-juaCj8zi594KHQqb92foyp87mCSriYjw3BcTHaXsAn4pEB1YWh+z+XQScMxIxzsjfM4BeVFV3Ij113lIjWiC2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/client.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

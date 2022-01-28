@@ -1,0 +1,240 @@
+body{
+    background-color: #141414;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.topnav{
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #73008a;
+    z-index: 9999;
+}
+.logo{
+    font-size: 40px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    font-weight: 100;
+}
+.nav-item{
+    padding: 10px;
+    background-color: #73008a;
+    font-size: 40px;
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+}
+.linkList{
+    float: right;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+.linkList .nav-item{
+    float: left;
+    transition: 0.5s all ease-in;
+    font-weight: 700;
+}
+.linkList .nav-item:hover{
+    color: #73008a;
+    background: #fff;
+}
+.bars{
+    display: none;
+    flex-direction: column;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+}
+.bar{
+    width: 40px;
+    height: 10px;
+    margin-top: 5px;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+.visible{
+    transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 600px){
+    .linkList{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: -100%;
+    }
+    .bars{
+        display: flex;
+    }
+}
+@media screen and (max-width: 600px) {
+    .visible {
+        top: 60px;
+        display: block;
+        z-index: 999;
+    }
+    .topnav{
+        flex-direction: column;
+    }
+    .linkList{
+        width: 100%;
+    }
+    .nav-item{
+        width: 100%;
+    }
+    .toggled{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .toggled > .bar{
+        position: absolute;
+    }
+    .toggled > .bar:nth-child(1){
+        transform: rotate(45deg);
+    }
+    .toggled > .bar:nth-child(2){
+        width: 0;
+    }
+    .toggled > .bar:nth-child(3){
+        transform: rotate(135deg);
+    }
+}
+
+/*messages*/
+
+.container{
+    position: relative;
+    overflow: auto;
+    max-width: 955px;
+    background: #fff;
+    margin: auto;
+    margin-top: 40px;
+    height: 60vh;
+}
+.message{
+    background-color: grey;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.left{
+    float: left;
+    left: 0;
+    color: #fff;
+    clear: both;
+    border: 2px solid rgb(77, 76, 76);
+    margin-left: 10px;
+}
+.left:hover{
+    background-color: rgb(77, 76, 76);
+}
+.right:hover{
+    background-color: #4b004b;
+}
+.right{
+    float: right;
+    background-color: #730073;
+    color: #fff;
+    clear: both;
+    border: 2px solid #4b004b;
+    margin-right: 10px;
+}
+.inputFld{
+    position: relative;
+    max-width: 955px;
+    height: 50px;
+    margin: auto;
+    padding: 0;
+}
+.inputFld input{
+    position: absolute;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    outline: none;
+    padding: 0;
+    border: 4px solid #730073;
+    font-size: 25px;
+}
+.inputFld button{
+    margin: 0;
+    position: absolute;
+    right: 0;
+    width: 20%;
+    height: 115%;
+    padding: 0;
+    background-color: #141414;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 800;
+    outline: none;
+    border: 4px solid #730073;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.inputFld button:hover{
+    background-color: #fff;
+    color: #000;
+}
+.inputFld button:active{
+    background-color: #fff;
+    color: #fff;
+}
+.entryForm{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#nameInput{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 20%;
+    background-color: #fff;
+}
+#nameInput input{
+    position: relative;
+    width: 95%;
+    height: 10%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    border: none;
+    color: #fff;
+    outline: none;
+    background-color: #730073;
+}
+#nameInput label {
+    font-size: 16px;
+    font-weight: 800;
+}
+#nameInput button{
+    position: absolute;
+    width: 80%;
+    height: 10%;
+    background-color: #730073;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 800;
+    outline: none;
+    border: none;
+    bottom: 5%;
+}
