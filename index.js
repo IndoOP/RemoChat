@@ -29,6 +29,14 @@ io.on('connection', socket => {
         console.log(msg);
         socket.broadcast.emit('receive', `${name}: ${msg}`);
         socket.emit('sending', `${name}: ${msg}`);
+
+        if (msg.includes("!help") == true) {
+                io.emit('receive', `RemoChat Bot: This is a simple website for chatting there is nothing complicated however if you are facing any issues you can still contact us on our contact form which will be available soon!`)
+        }
+
+        if (msg.includes("!support") == true) {
+                io.emit('receive', `RemoChat Bot: Subscribe me on YouTube <a href="https://youtube.com/c/1ndo." target="blank" style="color: #730073;">LINK</a>`)
+        }
     })
     })
 
