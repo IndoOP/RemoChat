@@ -37,7 +37,7 @@ io.on('connection', socket => {
             }
 
             if (msg.includes("!support") == true) {
-                io.emit('receive', `RemoChat Bot: Subscribe me on YouTube <a href="https://youtube.com/c/1ndo." target="blank" style="color: #730073;">LINK</a>`)
+                io.emit('receive', `RemoChat Bot: Subscribe me on YouTube <a href="https://youtube.com/@1ndo." target="blank" style="color: #730073;">LINK</a>`)
             }
         })
     })
